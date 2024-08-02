@@ -9,5 +9,6 @@ map("i", "jk", "<ESC>")
 
 --- Mapping for Ctrl + Enter to trigger code action
 vim.api.nvim_set_keymap('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>rf', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

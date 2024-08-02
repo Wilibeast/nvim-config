@@ -6,7 +6,7 @@ local util = require "lspconfig/util"
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"rust"},
+  filetypes = { "rust" },
   root_dir = util.root_pattern("Cargo.toml"),
   settings = {
     ['rust_analyzer'] = {
@@ -16,3 +16,14 @@ lspconfig.rust_analyzer.setup({
     }
   }
 })
+
+lspconfig.dartls.setup {
+  cmd = { "dart", "language-server", "protocol=lsp" },
+  filetypes = { "dart" },
+  root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
+  settings = {
+    dart = {
+    }
+  }
+}
+
