@@ -28,6 +28,27 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+require("nvim-tree").setup {
+  filters = {
+    dotfiles = false,
+    git_ignored = false,
+    custom = { "^.git$" },
+  },
+  renderer = {
+    root_folder_label = false,
+  },
+  git = {
+    enable = true,
+  },
+  diagnostics = {
+    enable = true,
+    severity = {
+      max = vim.diagnostic.severity.ERROR,
+      min = vim.diagnostic.severity.ERROR,
+    },
+  },
+}
+
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
@@ -38,4 +59,9 @@ vim.schedule(function()
   require "mappings"
 end)
 
-
+vim.cmd [[
+  augroup lsp
+    autocmd!
+    autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+  augroup END
+]]
