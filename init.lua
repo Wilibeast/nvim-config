@@ -66,7 +66,3 @@ vim.cmd [[
   augroup END
 ]]
 
-vim.cmd([[highlight DiagnosticVirtualTextError guibg=none]])
-vim.cmd([[highlight DiagnosticVirtualTextWarn guibg=none]])
-vim.cmd([[highlight DiagnosticVirtualTextInfo guibg=none]])
-vim.cmd([[highlight DiagnosticVirtualTextHint guibg=none]])
