@@ -65,3 +65,8 @@ vim.cmd [[
     autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
   augroup END
 ]]
+
+vim.cmd([[highlight DiagnosticVirtualTextError guibg=none]])
+vim.cmd([[highlight DiagnosticVirtualTextWarn guibg=none]])
+vim.cmd([[highlight DiagnosticVirtualTextInfo guibg=none]])
+vim.cmd([[highlight DiagnosticVirtualTextHint guibg=none]])
