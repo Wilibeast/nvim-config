@@ -11,6 +11,8 @@ Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate
 
 - `export JDTLS_PLUGIN_PATH=${JDTLS_HOME}plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar`
 
+- `export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/java/lombok.jar"`
+
 ## Keybinds
 ### Movement
 - "i" enters insert mode
@@ -85,4 +87,6 @@ Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate
 - "fz" find in current buffer
 - "space fw" find grep
 - "ctrl-n" open file viewer
+- search with /
+	- use "n" to go next and "N" to go back to previous find
 - "<line number/> G" go to line number
