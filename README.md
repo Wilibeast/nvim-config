@@ -4,6 +4,8 @@ This config uses Mason for some of the language server and debug adapter setup, 
 
 `:Lazy` will open up a GUI for some of the neovim plugins.
 
+If a file doesn't have syntax highlighting use `:TSInstall <language>`.
+
 Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate variables exported, for example:
 - `export JDTLS_HOME=/home/wbence/sdk/Java/jdtls-1.38.0/`
 
