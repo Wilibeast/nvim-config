@@ -30,16 +30,13 @@ return {
       require('rust-tools').setup(options)
     end
   },
-  {
-    "akinsho/flutter-tools.nvim",
+  { -- Flutter plugin
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
-    config = true,
-  },
-  {
-    "dart-lang/dart-vim-plugin"
   },
   { --Debugger tools
     "mfussenegger/nvim-dap",

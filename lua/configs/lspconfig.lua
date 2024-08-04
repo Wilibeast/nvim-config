@@ -28,12 +28,4 @@ lspconfig.rust_analyzer.setup({
   }
 })
 
-lspconfig.dartls.setup {
-  cmd = { "dart", "language-server", "protocol=lsp" },
-  filetypes = { "dart" },
-  root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
-  settings = {
-    dart = {
-    }
-  }
-}
+
