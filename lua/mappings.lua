@@ -11,4 +11,9 @@ map("i", "jk", "<ESC>")
 vim.api.nvim_set_keymap('n', 'ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>rf', '<cmd>Telescope lsp_references<CR>', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<leader>dt', "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>dc', "<cmd>lua require'dap'.continue()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>do', "<cmd>lua require'dap'.step_over()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<CR>", { noremap = true, silent = true })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
