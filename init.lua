@@ -50,6 +50,7 @@ require("nvim-tree").setup {
 }
 
 require("flutter-tools").setup {}
+require("debug_adapters")
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
