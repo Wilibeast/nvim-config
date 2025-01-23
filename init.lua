@@ -51,6 +51,11 @@ require("nvim-tree").setup {
 
 require("flutter-tools").setup {}
 require("debug_adapters")
+require("telescope").setup {
+  defaults = {
+    path_display = { 'smart' }
+  }
+}
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
@@ -68,4 +73,3 @@ vim.cmd [[
     autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
   augroup END
 ]]
-

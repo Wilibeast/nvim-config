@@ -5,7 +5,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "bearded-arc",
+  theme = "carbonfox",
 
   -- hl_override = {
   -- 	Comment = { italic = true },
