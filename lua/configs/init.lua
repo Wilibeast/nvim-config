@@ -1,0 +1,5 @@
+require('configs.lazy')
+require('configs.nvim_tree')
+require('configs.debug_adapters')
+require('configs.flutter-tools')
+require('configs.telescope')
