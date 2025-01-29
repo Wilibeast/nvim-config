@@ -4,5 +4,6 @@ return {
   require('plugins.nvim-lspconfig'),
   require('plugins.rust-tools'),
   require('plugins.flutter-tools'),
-  require('plugins.nvim-dap')
+  require('plugins.nvim-dap'),
+  require('plugins.nvim-jdtls')
 }
