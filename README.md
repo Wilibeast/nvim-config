@@ -16,7 +16,11 @@ Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate
 
 > NB Java 21 is required as the JAVA_HOME jdk
 
-You might have to check the configs/lspconfig.lua file to setup the right paths to the different binaries.
+WSL has a weird issue with some of the node Mason packages, where you need to create symlinks `ln -s` to the binaries, for example:
+
+```bash
+ln -sf ~/.local/share/nvim/mason/packages/vscode-langservers-extracted/bin/vscode-css-language-server ~/.local/share/nvim/mason/bin/vscode-css-language-server
+```
 
 Useful for maven projects `alias msr="mvn spring-boot:run"`
 
