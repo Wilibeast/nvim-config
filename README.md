@@ -7,17 +7,23 @@ This config uses Mason for some of the language server and debug adapter setup, 
 If a file doesn't have syntax highlighting use `:TSInstall <language>`.
 
 Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate variables exported, for example:
-- `export JDTLS_HOME=/home/wbence/sdk/Java/jdtls-1.38.0/`
+- `export PATH=$JAVA_HOME/bin:$PATH"`
+- `export PATH="$PATH:/opt/nvim-linux64/bin"`
+- `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin"`
 
-- `export JDTLS_PLUGIN_PATH=${JDTLS_HOME}plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar`
+- `export JDTLS_JVM_ARGS="-javaagent:$HOME/.config/nvim/dependencies/lombok.jar"`
+- `export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64`
 
-- `export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/java/lombok.jar"`
+> NB Java 21 is required as the JAVA_HOME jdk
+
+Useful for maven projects `alias msr="mvn spring-boot:run"`
 
 ## Keybinds
 ### Movement
 - "i" enters insert mode
 - "a" enters insert mode after cursor
 - "o" enters insert on next line
+- "shift + o" enters insert on previous line
 
 - "u" undo
 - "ctrl+r" redo
@@ -83,10 +89,12 @@ Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate
 8. ctrl + w + h/l or larrow/rarrow to switch between file tree and editor.
 
 ### General
-- "ff" find files
-- "fz" find in current buffer
-- "space fw" find grep
+- "space + ff" find files
+- "space + fz" find in current buffer
+- "space + fw" find grep
 - "ctrl-n" open file viewer
 - search with /
 	- use "n" to go next and "N" to go back to previous find
 - "<line number/> G" go to line number
+- "gg" to go to first line of file
+- "G" to go to last line of file
