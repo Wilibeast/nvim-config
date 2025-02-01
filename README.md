@@ -16,6 +16,8 @@ Please ensure that your terminal config (`.bashrc`/`.zshrc`) has the appropriate
 
 > NB Java 21 is required as the JAVA_HOME jdk
 
+You might have to check the configs/lspconfig.lua file to setup the right paths to the different binaries.
+
 Useful for maven projects `alias msr="mvn spring-boot:run"`
 
 ## Keybinds

@@ -2,17 +2,18 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls" }
 local nvlsp = require "nvchad.configs.lspconfig"
+local lsp_path = vim.fn.expand("~/.nvm/versions/node/v22.13.1/bin/vscode-html-language-server")
 
+-- local servers = { "html", "cssls" }
 -- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
-end
+-- for _, lsp in ipairs(servers) do
+--   lspconfig[lsp].setup {
+--     on_attach = nvlsp.on_attach,
+--     on_init = nvlsp.on_init,
+--     capabilities = nvlsp.capabilities,
+--   }
+-- end
 
 lspconfig.rust_analyzer.setup({
   on_attach = nvlsp.on_attach,
@@ -31,3 +32,7 @@ lspconfig.rust_analyzer.setup({
 lspconfig.jdtls.setup {
   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1])
 };
+
+lspconfig.html.setup {
+  cmd = { lsp_path, "--stdio" }
+}
