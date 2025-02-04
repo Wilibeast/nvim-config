@@ -100,7 +100,10 @@ Useful for maven projects `alias msr="mvn spring-boot:run"`
 - "space + fw" find grep
 - "ctrl-n" open file viewer
 - search with /
-	- use "n" to go next and "N" to go back to previous find
+    - use "n" to go next and "N" to go back to previous find
+    - search highlighted word with "#"
 - "<line number/> G" go to line number
 - "gg" to go to first line of file
 - "G" to go to last line of file
+- "z" toggle zen mode
+- "shift + '" clipboard

@@ -23,5 +23,6 @@ vim.api.nvim_set_keymap('n', '<leader>di', "<cmd>lua require'dap'.step_into()<CR
   { noremap = true, silent = true, desc = "Step into" })
 vim.api.nvim_set_keymap('n', '<leader>dm', "<cmd>lua CheckDapStatus()<CR>",
   { noremap = true, silent = true, desc = "Debugger Status" })
-
+vim.api.nvim_set_keymap('n', 'z', ":NoNeckPain<CR>",
+  { noremap = true, silent = true, desc = "No neck pain" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

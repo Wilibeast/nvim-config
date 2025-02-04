@@ -49,7 +49,7 @@ lspconfig.jdtls.setup {
 
 lspconfig.html.setup {}
 
-lspconfig.efm.setup {}
+-- lspconfig.efm.setup {}
 
 lspconfig.cssls.setup {}
 
